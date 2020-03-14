@@ -1,0 +1,7 @@
+<%= link_to "投稿画面へ", "/users/new" %>
+<% @users.each do |user| %>
+<p><%= user.name %></p>
+<p><%= user.age %></p>
+<%= link_to '編集', "/users/#{user.id}/edit", method: :get %>
+<%= link_to '削除', "/users/#{user.id}", method: :delete %>
+<% end %>
